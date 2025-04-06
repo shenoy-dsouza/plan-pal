@@ -96,9 +96,10 @@ streamlit run app/webapp/planner.py
 
 ---
 
-## 📸 Screenshots
+## 📹 Video
 
-> *(Add screenshots or GIFs here showing the interface and results)*
+Watch PlanPal in action:  
+[![Watch the demo](https://img.youtube.com/vi/shaeadrla5g/hqdefault.jpg)](https://www.youtube.com/watch?v=shaeadrla5g)
 
 ---
 
