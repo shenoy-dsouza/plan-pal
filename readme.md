@@ -53,7 +53,8 @@ pip install -r requirements.txt
 
 ---
 
-### 4. 🤖 Set Up Ollama for Local LLM Inference
+### 4. 🤖 Set Up Ollama for Local LLM Inference  
+> 💡 Prefer an API-based setup? [Click here to use Together AI instead](#-optional-use-together-ai-instead-of-ollama)
 
 PlanPal uses **Ollama** to run large language models like `llama3` **locally** — no OpenAI key required.
 
@@ -121,4 +122,38 @@ Powered by Agentic AI design, tools act like smart assistants to get things done
 - Customize the UI in `app/webapp/planner.py`  
 - Future ideas: Export to PDF, trip sharing link, map integration, etc.
 
+---
+
+
+## 🧩 Optional: Use Together AI Instead of Ollama
+
+PlanPal also supports **Together AI** as a backend for running **LLaMA-3** or other open models via API.
+
+To use Together AI:
+
+1. Install the Together module:
+   ```bash
+   pip install -U langchain-together
+   ```
+
+2. Add your Together API key to a `.env` file:
+   ```
+   TOGETHER_API_KEY=your-key-here
+   ```
+You can get your key from [https://api.together.xyz/settings/keys](https://api.together.xyz/settings/keys)
+
+> 💡 Make sure you're using the `langchain_together` package and importing correctly:
+
+
+3. Use it in your code:
+   ```python
+   from langchain_together import Together
+
+   llm = Together(
+       model="meta-llama/Llama-3-8b-chat-hf",
+       temperature=0.7
+   )
+   ```
+
+> This allows you to run the app without needing to install Ollama or use local compute.
 
